@@ -137,6 +137,7 @@
 		7C170D4C1A4A05B400D9E0F2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C170D4B1A4A05B400D9E0F2 /* CoreGraphics.framework */; };
 		7C170D4E1A4A05BE00D9E0F2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C170D4D1A4A05BE00D9E0F2 /* QuartzCore.framework */; };
 		7C170D501A4A05DD00D9E0F2 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C170D4F1A4A05DD00D9E0F2 /* libicucore.dylib */; };
+		AB2C18421B7B5C2500A877D4 /* UIView+MPHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = AB2C18411B7B5C2500A877D4 /* UIView+MPHelpers.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -272,6 +273,7 @@
 		7C170D4B1A4A05B400D9E0F2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		7C170D4D1A4A05BE00D9E0F2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		7C170D4F1A4A05DD00D9E0F2 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		AB2C18411B7B5C2500A877D4 /* UIView+MPHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MPHelpers.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -331,6 +333,7 @@
 		7C170C461A4A035F00D9E0F2 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				AB2C18411B7B5C2500A877D4 /* UIView+MPHelpers.m */,
 				7C170C471A4A035F00D9E0F2 /* _MPTweakBindObserver.h */,
 				7C170C481A4A035F00D9E0F2 /* _MPTweakBindObserver.m */,
 				7C170C4B1A4A035F00D9E0F2 /* Mixpanel.h */,
@@ -609,6 +612,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C170D1C1A4A035F00D9E0F2 /* MPSurveyQuestionViewController.m in Sources */,
+				AB2C18421B7B5C2500A877D4 /* UIView+MPHelpers.m in Sources */,
 				7C170D1A1A4A035F00D9E0F2 /* MPSurveyQuestion.m in Sources */,
 				7C170D221A4A035F00D9E0F2 /* MPTweakInline.m in Sources */,
 				7C170D0C1A4A035F00D9E0F2 /* MPObjectSerializerConfig.m in Sources */,
