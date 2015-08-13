@@ -1486,22 +1486,22 @@ static void MixpanelReachabilityCallback(SCNetworkReachabilityRef target, SCNetw
     [_shownSurveyCollections addObject:@(survey.collectionID)];
     [self.people append:@{@"$surveys": @(survey.ID), @"$collections": @(survey.collectionID)}];
 
-    if (![survey.name isEqualToString:@"$ignore"]) {
+//    if (![survey.name isEqualToString:@"$ignore"]) {
         [self track:@"$show_survey" properties:@{@"survey_id": @(survey.ID),
                                                  @"collection_id": @(survey.collectionID),
                                                  @"$survey_shown": @(shown),
                                                  @"$answer_count": @(count)
                                                  }];
-    }
+//    }
 }
 
 - (void)surveyController:(MPSurveyNavigationController *)controller wasDismissedWithAnswers:(NSArray *)answers
 {
     [controller.presentingViewController dismissViewControllerAnimated:YES completion:nil];
     self.currentlyShowingSurvey = nil;
-    if ([controller.survey.name isEqualToString:@"$ignore"]) {
-        MixpanelDebug(@"%@ not sending survey %@ result", self, controller.survey);
-    } else {
+//    if ([controller.survey.name isEqualToString:@"$ignore"]) {
+//        MixpanelDebug(@"%@ not sending survey %@ result", self, controller.survey);
+//    } else {
         [self markSurvey:controller.survey shown:YES withAnswerCount:[answers count]];
         for (NSUInteger i = 0, n = [answers count]; i < n; i++) {
             if (i == 0) {
@@ -1514,7 +1514,7 @@ static void MixpanelReachabilityCallback(SCNetworkReachabilityRef target, SCNetw
         dispatch_async(_serialQueue, ^{
             [self flushPeople];
         });
-    }
+//    }
 }
 
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
